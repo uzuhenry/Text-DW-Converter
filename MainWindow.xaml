@@ -1,0 +1,35 @@
+﻿<Window x:Class="textdwconverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:textdwconverter"
+        mc:Ignorable="d"
+        Title="Text DW Converter" Height="373" Width="743">
+    <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF71A0FB"/>
+                <GradientStop Color="#FF2D59AF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="daleAlBoton" Content="Convert text" HorizontalAlignment="Left" Height="55" Margin="512,184,0,0" VerticalAlignment="Top" Width="207" Click="btn_convertir_click"/>
+        <Label Content="Text to convert:" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="289" Margin="10,-1,0,0" FontFamily="Bungee Regular" FontSize="22"/>
+        <Label Content="converted text:" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="306" Margin="10,128,0,0" FontSize="22" FontFamily="Bungee Regular"/>
+        <TextBlock x:Name="textilloNumChar" HorizontalAlignment="Left" Height="27" Margin="662,249,0,0" TextWrapping="Wrap" Text="num" VerticalAlignment="Top" Width="57" Background="White" TextAlignment="Center" FontSize="14" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Char count:" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="138" Margin="502,234,0,0" FontSize="18" FontFamily="Bungee Regular"/>
+        <TextBox x:Name="textilloOriginal" HorizontalAlignment="Left" Height="91" Margin="10,49,0,0" TextWrapping="Wrap" AcceptsReturn="True" Text="..." VerticalAlignment="Top" Width="460" BorderBrush="Black" FontSize="14" KeyUp="textilloOriginal_KeyUp"/>
+        <TextBox x:Name="textilloConverso" HorizontalAlignment="Left" Height="92" Margin="10,184,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="460" BorderBrush="Black" FontSize="14"/>
+        <Label Content="Tool made by Uzuhenry." HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="362" Margin="510,335,0,0" Foreground="White"/>
+        <Button x:Name="botoncsv" Content="CSV convert" HorizontalAlignment="Left" Height="51" Margin="10,290,0,0" VerticalAlignment="Top" Width="207" Click="botoncsv_Click"/>
+        <Button x:Name="botonmulti" Content="Mass CSV convert" HorizontalAlignment="Left" Height="51" Margin="263,290,0,0" VerticalAlignment="Top" Width="207" Click="botonmulti_Click"/>
+        <Button x:Name="botoncheckmulti" Content="Check line ends for csv" HorizontalAlignment="Left" Height="51" Margin="512,290,0,0" VerticalAlignment="Top" Width="207" Click="botoncheckmulti_Click"/>
+        <Button x:Name="boton_crearlista" Content="Create new Char table" HorizontalAlignment="Left" Height="55" Margin="512,80,0,0" VerticalAlignment="Top" Width="207" Click="boton_crearlista_Click"/>
+        <Button x:Name="boton_cargarlista" Content="Load Char table" HorizontalAlignment="Left" Height="55" Margin="512,17,0,0" VerticalAlignment="Top" Width="207" Click="boton_cargarlista_Click"/>
+        <Label x:Name="Textillocustomtable" Content="Custom table not loaded" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="245" Margin="475,135,0,0" FontFamily="Bungee Regular" FontSize="16"/>
+
+    </Grid>
+</Window>
